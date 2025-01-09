@@ -1,0 +1,38 @@
+
+
+.Logo {
+    background: none;
+    border: none;
+    width: 400px;
+}
+.successIMG {
+    width: 300px;
+}
+
+.viewOrder {
+    position: relative; /* Needed for ::after positioning */
+    text-decoration: none; /* Remove default underline */
+    font-weight: 700;
+    font-size: 20px;
+    color: purple;
+    cursor: pointer;
+  }
+  
+  .viewOrder::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the underline position */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: purple; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for underline */
+  }
+  
+  .viewOrder:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  
+.bag {
+    font-size: 20px;
+}

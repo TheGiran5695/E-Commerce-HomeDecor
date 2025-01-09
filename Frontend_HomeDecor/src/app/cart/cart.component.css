@@ -1,0 +1,136 @@
+/* Cart */
+
+.cart-item {
+    margin: 1.8rem 0rem;
+    padding: 0rem 0.7rem;
+  }
+  
+  .cart-item a {
+    color: purple;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .minus {
+    background-color: crimson;
+    width: 50px;
+    font-weight: 700;
+  }
+
+  .plus {
+    background-color: green;
+    width: 50px;
+    font-weight: 700;
+  }
+
+  .count {
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+  }
+  
+  #delete_cart_item {
+    color: orangered;
+    background: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+  }
+  
+  #card_item_price {
+    color: darkorange;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  /* Cart */
+
+.cart-item {
+    margin: 1.8rem 0rem;
+    padding: 0rem 0.7rem;
+  }
+  
+  .cart-item a {
+    color: grey;
+  }
+  
+  #delete_cart_item {
+    color: red;
+    background: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+  }
+  
+  #card_item_price {
+    color: #febd69;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  
+  #checkout_btn,
+  .review-btn {
+    background-color: #fa9c23;
+    border-color: #fa9c23;
+    margin-top: 2rem;
+    border-radius: 5rem;
+  }
+  
+  #view_order_details {
+    background-color: #fa9c23;
+    border-color: #fa9c23;
+  }
+  
+  #order_summary {
+    border: 1px solid #e3e3e3;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .order-summary-values {
+    float: right;
+    font-weight: bold;
+  }
+  
+  .stockCounter input {
+    border: none;
+    width: 3rem;
+    text-align: center;
+  }
+  
+  .plus,
+  .minus {
+    padding: 0.1rem 0.5rem;
+  }
+  
+  .stockCounter input::-webkit-outer-spin-button,
+  .stockCounter input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .form-control:disabled,
+  .form-control[readonly] {
+    background-color: white;
+  }
+
+  .orderplace {
+    margin-left: 140px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: orange; /* Initial background color */
+    color: black;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+  }
+  
+  .orderplace:hover {
+    background-color: green; /* Change background color on hover */
+    color: #fff; /* Ensure text remains white */
+    transform: scale(1.1); /* Slightly increase button size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    cursor: pointer; /* Change cursor to indicate clickability */
+  }

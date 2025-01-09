@@ -1,0 +1,46 @@
+.signinBtn {
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.signinBtn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+@keyframes fadePulse {
+    0% {
+        background-color: orange;
+    }
+    50% {
+        background-color: darkorange;
+    }
+    100% {
+        background-color: orange;
+    }
+}
+
+.Logout {
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: fadePulse 2s infinite ease-in-out;
+    transition: transform 0.2s ease;
+}
+
+.Logout:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}

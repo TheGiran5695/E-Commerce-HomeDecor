@@ -1,0 +1,87 @@
+<div class="container-fluid" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-4"></div>
+
+        <div class="col-4" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; padding: 40px;">
+            <h3 class="text-center">Signup Page</h3>
+            <div class="mb-3">
+              <form (ngSubmit)="onSignup()">
+                  <div class="mb-3">
+                      <label for="name" class="col-form-label">UserName:</label>
+                      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="col-form-label">Email:</label>
+                      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email"  required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="phonenumber" class="col-form-label">PhoneNumber:</label>
+                      <input type="text" class="form-control" id="phonenumber" name="phonenumber" [(ngModel)]="phonenumber"  pattern="^\d{10}$" required>
+                      
+                  </div>
+                  <div class="mb-3">
+                      <label for="password" class="col-form-label">Password:</label>
+                      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password"  required>
+                      
+                  </div>
+                  <div class="mb-3">
+                      <label for="confirmPassword" class="col-form-label">Confirm Password:</label>
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"  required>
+                    
+                  </div>
+                  <!-- <div class="text-danger" *ngIf="errorMessage">{{ errorMessage }}</div> -->
+                  <div class="d-grid gap-2 col-4 mx-auto">
+                      <button class="btn btn-sm" style="background-color: orange; color: white; font-weight: 700; font-size: 20px;" type="submit" [disabled]="isSubmitting">
+                          Signup
+                      </button>
+                  </div>
+              </form>
+          </div>
+          
+
+            <p>If you are already a user? <a routerLink="/Signin">Login</a></p>
+        </div>
+
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<!-- Success Modal for Signup -->
+<div class="modal" tabindex="-1" id="successModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Signup {{ signupStatus }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{ modalMessage }}</p>
+          <img src="{{ success }}" alt="success gif" width="200px" style="background: none; border: none;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  aria-label="Close">Close</button>
+          <button type="button" class="btn btn-primary" (click)="navigateToSignIn()" data-bs-dismiss="modal" aria-label="Close">Go to SignIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Error Modal for Signup -->
+  <div class="modal" tabindex="-1" id="errorModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Signup Failed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{ errorMessage }}</p>
+          <img src="{{ failed }}" alt="error gif" width="200px">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

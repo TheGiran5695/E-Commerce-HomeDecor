@@ -1,0 +1,62 @@
+<!-- user-profile.component.html -->
+
+<div *ngIf="userDetails; else noUser">
+    <img src="{{accounts}}" class="img-thumbnail" alt="..." style="width: 100px; background: none; border: none;">
+    <h6 class="display-6" style="color: black; font-size: 30px;">Welcome, <span style="color: orange; font-weight: 700;">{{ userDetails.name }}</span></h6>
+    <p style="color: black;">Email: <span style="color: orange; font-weight: 500;">{{ userDetails.email }}</span></p>
+    <p style="color: black;">Contact: <span style="color: orange; font-weight: 500;">{{ userDetails.phoneNumber }}</span></p>
+    <button type="button" class="btn btn-sm Logout" (click)="logout()">Logout</button>
+    <button type="button" class="btn btn-sm btn-primary" (click)="toggleEdit()">Edit</button>
+
+
+
+    <!-- Edit Form -->
+  <div *ngIf="isEditing" class="mt-3">
+    <form (ngSubmit)="updateUserDetails()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          [(ngModel)]="editForm.email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phoneNumber"
+          [(ngModel)]="editForm.phoneNumber"
+          name="phoneNumber"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          [(ngModel)]="editForm.password"
+          name="password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-sm btn-success">Save</button>
+      <button type="button" class="btn btn-sm btn-secondary" (click)="toggleEdit()">Cancel</button>
+    </form>
+    <p>   <span style="color: red;">Note : </span> <span style="color: black;">after Editing your details please Logout and signin</span></p>
+  </div>
+  
+  </div>
+  
+  <ng-template #noUser>
+    <img src="{{nouserdetailsimg}}" class="img-thumbnail" alt="..." style="width: 100px; background: none; border: none;">
+    <p>note: <span style="color: red; font-size: 15px;">please signin to get profile</span></p>
+    <button type="button" class="btn signinBtn  btn-sm" routerLink="/Signin">SignIn !</button>
+  </ng-template>
+  

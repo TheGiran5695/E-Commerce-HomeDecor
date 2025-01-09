@@ -1,0 +1,11 @@
+.goToSignin {
+    background-color: orange;
+    font-weight: 600;
+    color: white;
+}
+
+.close {
+    background-color: red;
+    color: bisque;
+    font-weight: 600;
+}

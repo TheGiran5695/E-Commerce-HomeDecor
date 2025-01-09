@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- <button class="btn btn-primary mb-4" (click)="applyFilters()">Show Beds</button> -->
+        <div class="col">
+
+        </div>
+        <!-- Product Filter Column -->
+        <!-- Product Cards Column -->
+        <div class="col-12 col-md-9" style="margin-top: 30px;">
+            <h5 style="color: purple;">Make Your Television Set's <span class="disabled" style="font-size: 12px; color: #b3b6b7;">(Showing {{ startIndex }} – {{ endIndex }} products of {{ totalProducts }} products)</span></h5>
+            <p style="font-size: 10px; color: #d0d3d4;">Catch up on the latest trends and styles with a new pair of sneakers from some of the biggest brands in the world. These versatile and stylish shoes are ideal for many occasions as they can be paired with jeans, chinos, and other Western wear! Liberty’s collection of sneakers and casual wear comes with ample padding in the insole to help reduce the chance of injury. With attractive colours and stylish designs, these shoes make a great style statement. You can also check out shoes from U.S Polo Assn (New Launches), which make for a great addition to your closet and complement your outfits with their modern designs. With options like the Clarkin Sneakers for Men, Madryn Sneakers, Panal, and more you have a broad range of styles and colours to choose from. Other popular brands you can choose from include Puma, Crocs, Skechers, and many more. Making your decision is made easier by comparing the ratings and reviews offered by other customers who have shopped for these products too. You can compare these reviews to make an informed decision, before getting your preferred shoes delivered to your home. Check out wide collections of sneakers for men online on Flipkart at best prices. Price list last updated on 02-Nov-24.</p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" style="padding: 30px;">
+                @if(products.length > 0){
+                    <!-- Product Cards -->
+                <div *ngFor="let product of filteredProducts" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <img src="{{product.images[0].image}}" class="card-img-top" alt="Product 1" >
+                        <div class="card-body">
+                            <h5 class="card-title"><a routerLink="/product/{{product._id}}" style="text-decoration: none; color: black; font-size: 15px;">{{product.name}}</a></h5>
+                            <div class="ratings mt-auto">
+                                <div class="rating-outer">
+                                  <div class="rating-inner" [ngStyle]="{'width': product.ratings / 5 * 100 + '%' }"></div>
+                                </div>
+                                <span id="no_of_reviews">(5 Reviews)</span>
+                            </div>
+                            <p class="card-price" style="font-weight: bold; color: green;">Price: ₹{{product.price}} - <span>{{product.offers}}%off</span> - MRP <span style="text-decoration: line-through; color: red;">{{product.MRP}}</span></p>
+                            <p class="card-text" style="color: gray;">
+                                {{ expandedProducts[product._id] ? product.description : getFirstWords(product.description, 15) }}
+                                <a href="javascript:void(0)" (click)="toggleDescription(product._id)">
+                                    {{ expandedProducts[product._id] ? 'Show Less' : 'More' }}
+                                </a>
+                            </p>
+                            <a routerLink="/product/{{product._id}}" class="btn btn-primary btn-sm w-100">View More Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                }
+                @else {
+                    
+                    <div class="d-flex justify-content-center align-items-center" style="margin-left: 280px; width: 600px;">
+                        <img src="{{noprodFound1}}" class="img-fluid" alt="...">
+                    </div>
+                }
+            </div>
+        
+    </div>
+
+    <div class="col">
+            
+    </div>
+</div>

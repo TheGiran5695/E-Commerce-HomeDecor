@@ -1,0 +1,51 @@
+
+
+
+<div class="container-fluid" style="margin-top: 70px;">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; padding: 40px;">
+      <h3 class="text-center">SignIn Page</h3>
+      <form (ngSubmit)="onSignin()">
+        <div class="mb-3">
+          <label for="email" class="col-form-label">Email:</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="col-form-label">Password:</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required />
+        </div>
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <button class="btn btn-sm" style="background-color: orange; color: white; font-weight: 700; font-size: 20px;" type="submit">
+            SignIn
+          </button>
+          
+        </div>
+        <p style="padding: 30px;">you are a newuser: <a routerLink="/Signup">Signup?</a></p>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+
+<!-- Error Modal for SignIn -->
+<div class="modal fade" tabindex="-1" id="errorModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">SignIn Failed</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>{{ errorMessage }}</p>
+        <img src="{{ failed }}" alt="Error Image" width="150px" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

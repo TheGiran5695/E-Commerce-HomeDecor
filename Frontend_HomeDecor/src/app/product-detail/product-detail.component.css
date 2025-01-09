@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+AU+QLD+Guides&family=Playwrite+AU+VIC+Guides&family=Playwrite+CO+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.d_name {
+    font-family: "Poppins", serif;
+    margin-top: 25px;
+}
+#product_id {
+    font-size: 12px;
+    color: purple;
+}
+.strong {
+    color: purple;
+    font-size: 15px;
+    font-family: "Poppins", serif;
+}
+
+.description {
+    margin-top: 25px;
+    font-family: "Poppins", serif;
+}
+
+img.img-thumbnail {
+    margin: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  img.img-thumbnail:hover {
+    transform: scale(1.1);
+    border: 2px solid #007bff;
+  }
+  
+  img.img-fluid {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .addtocart {
+    background-color: orange;
+    font-weight: 700;
+  }
+  .cart {
+    font-size: 24px;
+  }
+
+  /* Ratings */
+.ratings {
+    font-size: 1rem;
+    color: #fdcc0d;
+  }
+  .rating-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+    color: #fdcc0d;
+  }
+  
+  .rating-outer::before {
+    content: '\f006 \f006 \f006 \f006 \f006';
+  }
+  
+  .rating-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .rating-inner::before {
+    content: '\f005 \f005 \f005 \f005 \f005';
+    color: #f8ce0b;
+  }
+
+  /* no of reviews */
+  #no_of_reviews {
+    font-size: 0.85rem;
+    color: grey;
+    margin-left: 0.5rem;
+  }
+
+  .status {
+    color: purple;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Poppins", serif;
+  }
+
+  .backToHome,
+.backToProduct {
+  position: relative; /* Required for positioning the ::after element */
+  background: none;
+  color: purple;
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer;
+}
+
+.backToHome::after,
+.backToProduct::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the underline */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: purple; /* Color of the underline */
+  transition: width 0.3s ease; /* Animation for underline */
+}
+
+.backToHome:hover::after,
+.backToProduct:hover::after {
+  width: 100%; /* Expand the underline to full width on hover */
+}

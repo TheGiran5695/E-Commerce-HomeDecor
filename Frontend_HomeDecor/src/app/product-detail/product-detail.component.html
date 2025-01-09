@@ -1,0 +1,126 @@
+
+
+
+<div class="container-fluid" style="margin-top: 10px;">
+  <div *ngIf="!product; else productList">
+    <h3 class="display-3">No Products Found</h3>
+  </div>
+
+  <ng-template #productList>
+    <div class="row">
+      <div class="row" *ngFor="let products of [product]"> <!-- Loop over the product array -->
+        <!-- Product Image and Thumbnails -->
+        <div
+          class="col-md-4"
+          style="box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; padding: 30px;"
+        >
+          <!-- Selected Image Preview -->
+          <div class="selected-image text-center" style="height: 600px;">
+            <img
+              [src]="selectedImage || products.images[0]?.image"
+              alt="Selected Product Image"
+              class="img-fluid"
+              style="width: 100%; max-height: 500px; object-fit: contain; border: none; margin-bottom: 20px; background: none;"
+            />
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="row text-center">
+            <div class="col-4" *ngFor="let image of products.images">
+              <img
+                [src]="image.image"
+                class="img-thumbnail"
+                alt="Thumbnail"
+                (click)="onImageClick(image.image)"
+                style="cursor: pointer; width: 100px; height: auto;"
+              />
+            </div>
+          </div>
+          <hr />
+        </div>
+
+        <!-- Product Description -->
+        <div class="col-md-4">
+          <p class="description">{{ products.description }}</p>
+          <hr />
+          <p>
+            <strong class="strong">Dimensions:</strong> {{ products.dimensions }}<br />
+            <strong class="strong">Color:</strong> {{ products.color }}<br />
+            <strong class="strong">Type:</strong> {{ products.type }}<br />
+            <strong class="strong">EX-Material:</strong> {{ products.EXmaterial }}<br />
+            <strong class="strong">IN-Material:</strong> {{ products.INmaterial }}<br />
+            <strong class="strong">Status:</strong> {{ products.stock }}<br />
+          </p>
+          <hr />
+          <div class="d-grid gap-2 d-md-block">
+            <button class="btn" (click)="decreaseQty()" style="background-color: crimson; color: white; font-size: 20px; width: 60px;" type="button">
+              <span style="font-weight: 500;">-</span>
+            </button>
+            
+            <div class="btn"  type="button">
+             
+                 <input class="form-control count d-inline" [(ngModel)]="qty" readonly type="number" value="1" style="font-size: 20px; border: none; font-weight: 800;">
+              
+            </div>
+
+            <button class="btn" (click)="increaseQty()" style="background-color: green; color: white; font-size: 20px; width: 60px;" type="button">
+              <span style="font-weight: 500;">+</span>
+            </button>
+
+          </div>
+          <hr />
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn addtocart" type="button" (click)="addToCart()">AddToCart <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span></button>
+          </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-4">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn backToProduct" type="button">Product <span><i class="fa-brands fa-product-hunt"></i></span></a>
+          </div>
+          <p class="d_name">
+            <span>
+              <p id="product_id">Product ID - <span style="color: #b3b6b7;">#{{ products._id }}</span></p>
+            </span>
+            <strong class="strong">Name:</strong> <span> {{ products.name }}</span><br />
+            <strong class="strong">Price:</strong> ₹<span style="font-weight: 700; font-size: 20px; color: black;"> {{ products.price }}</span><br />
+            <strong class="strong">MRP:</strong> ₹<span style="text-decoration: line-through; color: red;"> {{ products.MRP }}</span><br />
+            <strong class="strong">Ratings:</strong>
+            ⭐<span style="font-weight: 700; font-size: 20px; color: black;">
+              <div class="ratings mt-auto">
+                <div class="rating-outer">
+                  <div
+                    class="rating-inner"
+                    [ngStyle]="{ width: (products.ratings / 5) * 100 + '%' }"
+                  ></div>
+                </div>
+                <span id="no_of_reviews">(5 Reviews)</span>
+              </div>
+            </span>
+            <strong class="strong">Seller:</strong>
+            <span style="font-weight: 700; font-size: 20px; color: black;"> {{ products.seller }}</span><br />
+          </p>
+          <p class="status">
+            Status:
+            <span
+              id="stock_status"
+              [innerText]="products.stock > 0 ? 'In Stock' : 'Out Of Stock'"
+              [ngStyle]="{ color: products.stock > 0 ? 'green' : 'red' }"
+              style="font-weight: 500;"
+            ></span>
+          </p>
+          <hr />
+          <h2 style="font-size: 20px;">
+            Payable Amount is: <span style="color: darkorange; font-size: 30px;">{{ products.price }}</span> for 1 product
+          </h2>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+
+  
+

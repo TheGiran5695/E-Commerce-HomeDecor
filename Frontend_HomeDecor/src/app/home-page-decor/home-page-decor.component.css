@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+AU+QLD+Guides&family=Playwrite+AU+VIC+Guides&family=Playwrite+CO+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.uniform-image {
+    object-fit: cover; /* Ensures images fill their containers without distortion */
+    width: 100%;       /* Makes the images responsive */
+    height: 200px;     /* Sets a fixed height for uniformity */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animations */
+  }
+
+  .uniform-image:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  }
+
+  .hover-container {
+    position: relative;
+    display: block;
+  }
+
+  .hover-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7); /* Makes text stand out */
+  }
+  
+  .hover-container:hover .uniform-image {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Optional: Zoom effect on image hover */
+  }
+  
+  .hover-container:hover .hover-title {
+    opacity: 1;
+  }
+  
+  .fade-in {
+    opacity: 0;             /* Start transparent */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Set to normal position */
+    }
+  }
+
+  .uniform-image1 {
+    object-fit: cover; /* Ensures images fill their containers without distortion */
+    width: 200px;       /* Makes the images responsive */
+    height: 200px;     /* Sets a fixed height for uniformity */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+  }
+
+  .subRandings {
+    color: goldenrod;
+  }
+  .brandings {
+    color: goldenrod;
+    font-size: 20px;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .brand_Logo {
+    margin-top: 30px;
+    width: 100px;
+    background: none;
+    border: none;
+  }
+
+
+  .main-image-container {
+    position: relative;
+    width: 100%;
+    height: 750px;
+  }
+
+  .overlap-container {
+    width: 1500px;
+    position: absolute;
+    top: 130%; /* Starts 70% down from the top of the image, overlapping 30% */
+    left: 50%; /* Horizontally centers the container */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a luxurious shadow */
+    border-radius: 10px; /* Optional: rounded corners */
+    z-index: 2;
+    transition: transform 0.4s ease, top 0.4s ease;
+  }
+
+  .promises {
+    background: none;
+    border: none;
+    width: 140px;
+  }
+
+  /* Set a fixed size for all images */
+.hover-effect {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    object-fit: cover; /* Ensures images fill the box while maintaining aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Optional: rounded corners */
+    background: none;
+    border: none;
+  }
+  
+  /* Add scaling effect on hover */
+  .hover-effect:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+  }
+  
+  .hover-text {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    line-height: 1.8; /* Adds spacing between lines */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hover-text:hover {
+    color: #007bff; /* Change to your desired hover color */
+  }
+  
+  .hover-text br {
+    display: block;
+    margin-bottom: 10px; /* Add spacing between lines */
+  }
+  
+  .hover-text:hover span {
+    color: #007bff; /* Text color transition */
+    transform: translateX(10px); /* Move text slightly to the right */
+  }
+  
+  .hover-line {
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hover-line:hover {
+    color: #007bff;
+    transform: translateX(10px);
+    border-bottom: solid 1px orange;
+  }
+  
+
+
+
+
+  .content {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Initial state of spans */
+.animated-span {
+    font-size: 13px;
+    display: block; /* Ensures each span is on a new line */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Slightly move down */
+    animation: fadeInUp 1s ease forwards; /* Animation properties */
+  }
+  
+  /* Add delay for each span */
+  .animated-span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .animated-span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .animated-span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .animated-span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .animated-span:nth-child(6) {
+    animation-delay: 1s;
+  }
+  .animated-span:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  
+  /* Keyframes for animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } 
+
+
+  .Explore-More {
+    background-color: #ecf0f1;
+    margin-left: 30px;
+    font-weight: 700;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  
+  .Explore-More:hover {
+    background-color: rebeccapurple; /* Change to a darker color */
+    color: white;
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  }
+  
