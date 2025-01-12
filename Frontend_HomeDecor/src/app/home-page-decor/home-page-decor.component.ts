@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-home-page-decor',
   standalone: true,
@@ -79,8 +80,6 @@ export class HomePageDecorComponent implements OnInit{
       }
     }
   }
-
-
   
 
 }
