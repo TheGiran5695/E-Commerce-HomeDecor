@@ -227,4 +227,12 @@
     transform: scale(1.1); /* Slightly enlarge the button */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
   }
+
+
+  .bars {
+    padding: 5px;
+  }
+  .progress-bar {
+    background-color: gold;
+  }
   
