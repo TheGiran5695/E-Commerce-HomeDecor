@@ -61,25 +61,6 @@ export class AllProductsDecorComponent implements OnInit{
     this.applyFilters(); // Reapply filters to reset filteredProducts
   }
 
-  // applyFilters(): void {
-  //   this.filteredProducts = this.products.filter((product: { category: string; price: number; ratings: number; }) => {
-  //     return (
-  //       (!this.categoryFilter || product.category === this.categoryFilter) &&
-  //       product.price >= this.minPrice &&
-  //       product.price <= this.maxPrice &&
-  //       product.ratings >= this.minRating
-  //     );
-  //   });
-  // }
-
-  // resetFilters(): void {
-  //   this.categoryFilter = '';
-  //   this.minPrice = 0;
-  //   this.maxPrice = Infinity;
-  //   this.minRating = 0;
-  //   this.filteredProducts = [...this.products];
-  // }
-
   toggleDescription(productId: string): void {
     this.expandedProducts[productId] = !this.expandedProducts[productId];
   }
