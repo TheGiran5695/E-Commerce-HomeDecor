@@ -1,4 +1,4 @@
-<nav class="navbar first">
+<nav class="navbar first" id="homeCannel">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="{{Logo}}" class="img-fluid" alt="..." style="width: 200px; background: none; border: none; margin-top: -8px;">
@@ -18,18 +18,14 @@
       </div>
     </div>
 
-    
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
       <button class="btn storeBtn me-md-2" type="button">Store <i class="fa-solid fa-location-dot"></i></button>
       <button class="btn storeBtn " type="button">Bussiness <i class="fa-solid fa-business-time"></i></button>
-      <button class="btn storeBtn " type="button"><i class="fa-solid fa-user"></i> Account</button>
+      <!-- <button class="btn storeBtn " type="button"><i class="fa-solid fa-user"></i> Account</button> -->
       <button class="cartBtn" routerLink="/cart" type="button">Cart <i class="fa-solid fa-cart-shopping"></i> <span style=" font-size: 30px; margin-left: 4px; color: orange; font-weight: 600;">{{cartCount}}</span> <span style="font-size: 9px;">Counts</span></button>
     </div>
 
     <button class="btn signupBtn" routerLink="/Signin"  type="button">SignIn !</button>
-
-    
 
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,15 +52,9 @@
     </div>
   </div>
 </nav>
-
-
-
 <!-- <div class="sticky-top" style="margin-top: 57px;">
 <app-mini-navbar></app-mini-navbar>
 </div> -->
-
-
-
 <nav class="navbar navbar-expand-lg sticky-top" style="background-color: purple">
 <div class="container-fluid">
   <a class="navbar-brand" href="#"></a>
@@ -74,7 +64,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
         <li class="nav-item me-3">
-            <a class="nav-link" routerLink="DIH_Decor/Avvertise/DataShore">Home</a>
+            <a class="nav-link" routerLink="DIH_Decor/Avvertise/DataShore" (click)="onScrollHome()">Home</a>
         </li>
       <li class="nav-item dropdown me-3">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" routerLink="DIH_Decor/All_Products/DataVisible/Products" aria-expanded="false">
@@ -99,14 +89,14 @@
         </ul>
       </li>
       <li class="nav-item dropdown me-3">
-        <a class="nav-link"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link"  role="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="scrollToSection()">
             About_Us
         </a>
         
       </li>
 
       <li class="nav-item dropdown me-3">
-        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="scrollTocontact_Us()">
             Contact us
         </a>
         
@@ -129,6 +119,7 @@
 </div>
 </nav>
 
+<!-- Section For All Routes -->
 <section>
   <router-outlet />
 </section>
