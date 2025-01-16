@@ -28,7 +28,7 @@ export class SignupPageComponent {
   isSubmitting: boolean = false;  // Disable button while submitting
 
   success = 'https://media.tenor.com/BSY1qTH8g-oAAAAM/check.gif';
-  failed = 'https://via.placeholder.com/150/FF0000?text=Error';
+  failed = 'https://assets-v2.lottiefiles.com/a/b5641ed8-1152-11ee-ada0-8f4e8e17569e/AVXn9ghicT.gif';
 
   constructor(private authService: AuthService, private router: Router) {}
 
