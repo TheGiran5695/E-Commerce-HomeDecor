@@ -18,7 +18,7 @@ export class HomePageDecorComponent implements OnInit{
 
   
 
-  wallImage: string = "https://c0.wallpaperflare.com/preview/226/318/321/apartment-clean-condominium-contemporary.jpg"
+  wallImage: string = "https://assets.architecturaldigest.in/photos/600836a688d5cb634511e472/16:9/w_2560%2Cc_limit/summer-home-decor-featured-image-1366x768.jpg"
 
 
 
@@ -35,7 +35,7 @@ export class HomePageDecorComponent implements OnInit{
   Logo:string = "https://interiorhomesdecor.com/assets/images/logo.png"
 
   img1:string = "https://img.lovepik.com/bg/20240502/3d-render-of-a-modern-dining-room-with-gray-table_8482571_wh860.jpg!/fw/860"
-  img2:string = "https://w0.peakpx.com/wallpaper/548/427/HD-wallpaper-modern-design-architecture-house-interior-home-design-sofa.jpg"
+  img2:string = "https://www.lakdi.com/cdn/shop/files/L_Shape_Suede_Fabric_6_Seater_Sofa_Set_Luxury_Furniture_with_Solid_Wood_Frame_-_-3759327.jpg?v=1736854234"
   img3:string = "https://5.imimg.com/data5/SELLER/Default/2024/9/453066656/OB/PX/LT/193684312/imported-beds-500x500.jpg"
   img4:string = "https://image.made-in-china.com/2f0j00cRAqMlBDZHoT/Modern-Style-Wooden-Melamine-Home-Use-Furniture-Combination-TV-Stand-Coffee-Table-Set.webp"
   img5:string = "https://png.pngtree.com/background/20231117/original/pngtree-art-deco-sofa-set-with-side-tables-and-lamps-featuring-high-picture-image_6299930.jpg"
