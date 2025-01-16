@@ -1,15 +1,16 @@
 const User = require('../models/userModel');
 
 exports.signup = async (req, res) => {
+  const { name, email, phoneNumber, password } = req.body;
+  if (!name || !email || !phoneNumber || !password) {
+      console.error("Missing required fields");
+      return res.status(400).json({ message: "All fields are required" });
+  }
     try {
         // console.log("Request Body:", req.body); // Debug incoming data
         
         // Check all required fields
-        const { name, email, phoneNumber, password } = req.body;
-        if (!name || !email || !phoneNumber || !password) {
-            console.error("Missing required fields");
-            return res.status(400).json({ message: "All fields are required" });
-        }
+        
 
         // Validate email uniqueness
         const existingUser = await User.findOne({ email });
