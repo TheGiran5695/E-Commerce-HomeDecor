@@ -37,7 +37,7 @@ export class SignupPageComponent {
       this.errorMessage = 'All fields are required!';
       this.showModal('errorModal');
       return;
-    }
+    } 
 
     if (this.password !== this.confirmPassword) {
       this.errorMessage = 'Passwords do not match!';
