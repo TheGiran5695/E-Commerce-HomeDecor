@@ -25,15 +25,15 @@ exports.signup = async (req, res) => {
           return res.status(400).json({ message: "Email already exists" });
       }
 
-      // Hash the password before saving
-      const hashedPassword = await bcrypt.hash(password, 10);
+      // // Hash the password before saving
+      // const hashedPassword = await bcrypt.hash(password, 10);
 
       // Save user to the database
       const user = new User({
           name: name.trim(),
           email: email.toLowerCase().trim(),
           phoneNumber: phoneNumber.trim(),
-          password: hashedPassword,
+          password: password,
       });
 
       const savedUser = await user.save();
