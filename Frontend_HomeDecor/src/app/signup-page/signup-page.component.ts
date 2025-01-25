@@ -52,6 +52,7 @@ export class SignupPageComponent {
       password: this.password,
     };
 
+    // Call signup API
     this.isSubmitting = true;
     this.authService.signup(user).subscribe({
       next: () => {
